@@ -1,0 +1,187 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block body_content %}
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="#">그로더 프로젝트</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'about-page' %}">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#how-to">How</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#faq-section">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Header-->
+            <header id="main-hero" class="bg-dark py-5">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center justify-content-center">
+                        <div class="col-lg-8 col-xl-7 col-xxl-6">
+                            <div class="my-5 text-center text-xl-start">
+                                <h1 class="display-5 fw-bolder text-white mb-2">함께하는 아바타 홈 트레이닝</h1>
+                                <p class="lead fw-normal text-white-50 mb-4">꾸준한 습관을 만드는 운동 커뮤니티. 함께하면 동기부여가 두배. 사생활 보호 방구석 홈 트레이닝</p>
+                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        시작하기
+                                    </button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="row text-center py-4 px-4" style="margin-right: 0; margin-left: 0;">
+                                                    <div class="col-md mb-md-0 mb-5">
+                                                        <div class="modal-body p-0">
+                                                            <h4 class="fw-bolder">바로시작하기</h4>
+                                                            <p class="text-muted">매일 저녁 8시반부터 10시까지 진행해요. 자유롭게 입장 후 함께 운동해요!</p>
+                                                            <button type="button" class="btn btn-primary fw-bolder" onclick="window.open('https://zep.us/play/DEprYO','_blank')" style="font-size: 1.1rem;">홈트 하러가기</button>
+                                                        </div>
+                                                    </div>
+                                                        <div id="modal-divider" class="vr" style="padding: 0;"></div>
+                                                        <hr id="modal-horizontal-divider" class="mb-5">
+                                                    <div class="col-md">
+                                                        <div class="modal-body p-0">
+                                                            <h4 class="fw-bolder">처음이신가요?</h4>
+                                                            <p class="text-muted">처음이거나 입장코드를 까먹으셨다면 아래를 클릭해주세요!</p>
+                                                            <button data-tf-popup="VESrjE4Q" data-tf-size="70" data-tf-iframe-props="title=My typeform" 
+                                                            data-tf-medium="snippet" class="btn btn-secondary fw-bolder" style="font-size: 1.1rem;">입장코드 받기</button>
+                                                        </div> 
+                                                    </div>
+                                                    {% comment %} <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Understood</button>
+                                                    </div> {% endcomment %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="btn btn-outline-light btn-lg px-4" href="#how-to">이용방법</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
+                            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img class="d-block w-100 img-fluid rounded-3 my-5" src={% static 'information/images/Thankyou_bubu_main_pic.png'%} alt="First slide">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img class="d-block w-100 img-fluid rounded-3 my-5" src={% static 'information/images/Sibsis_main.png'%} alt="Second slide">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img class="d-block w-100 img-fluid rounded-3 my-5" src={% static 'information/images/Seeyou_again.png'%} alt="Third slide">
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- Features section-->
+            <section class="py-5" id="features">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5">
+                        <div class="col-lg-4 mb-5 mb-lg-0"><h2 class="fw-bolder mb-0">함께인듯 함께아닌 함께하는 홈 트레이닝</h2></div>
+                        <div class="col-lg-8">
+                            <div class="row gx-5 row-cols-1 row-cols-md-2">
+                                <div class="col mb-5 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-universal-access-circle"></i></div>
+                                    <h3 class="h5">온라인 헬스장</h3>
+                                    <p class="mb-0">가상공간에서 홈 트레이닝 친구들과 함께 영상을 보며 운동해요.</p>
+                                </div>
+                                <div class="col mb-5 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-person-hearts"></i></div>
+                                    <h3 class="h5">헬린이 대환영</h3>
+                                    <p class="mb-0">더 이상 헬스장에서 눈치보지말고 나만의 페이스에 맞춰 자유롭게 운동해요.</p>
+                                </div>
+                                <div class="col mb-5 mb-md-0 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-wechat"></i></div>
+                                    <h3 class="h5">혼자가 아닌 너</h3>
+                                    <p class="mb-0">같은 시간에 같은 영상을 보며 운동하는 친구들을 보며 동기부여를 받으세요.</p>
+                                </div>
+                                <div class="col h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-shield-shaded"></i></div>
+                                    <h3 class="h5">프라이버시 보호</h3>
+                                    <p class="mb-0">내 운동모습이 어떤지 다른사람의 눈치 볼 필요없이 나만의 운동에 집중해요.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Gymsaying section-->
+            <section class="py-5 bg-light">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-6 order-first order-lg-last text-cetner"><img class="img-fluid rounded mb-5 mb-lg-0" src={% static "information/images/Gym_saying.png"%} alt="..." /></div>
+                        <div class="col-lg-6">
+                            <h2 class="fw-bolder">왜 운동은 꼭 힘들어야 하나요?</h2>
+                            <p class="lead fw-normal text-muted mb-0">꾸준한 운동이 어려우셨나요? 힘든일을 억지로 하면 지속가능하지 않아요. 우리 같이 공간의 제약에서 벗어나 스마트하게 효율적으로 운동해요.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- how-to-section -->
+            <section id="how-to" class="py-5">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-8 col-xl-6">
+                            <div class="text-center">
+                                <h2 class="fw-bolder">그로더 이용방법</h2>
+                                <p class="lead fw-normal text-muted mb-5">쉽고 간단한 그로더의 이용방법을 확인해보세요.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row gx-5">
+                        {% for how_to in how_tos %}
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow border-0">
+                                <img class="card-img-top" src={% get_static_prefix %}{{ how_to.img_path }} alt="..." />
+                                <div class="card-body p-4">
+                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">{{ how_to.hashtag }}</div>
+                                    <a class="text-decoration-none link-dark stretched-link" href="#main-hero"><h5 class="card-title mb-3">{{ how_to.instruction_header }}</h5></a>
+                                    <p class="card-text mb-0">{{ how_to.instruction_content }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+                    <!-- FAQ -->
+            <section id="faq-section" class="py-5 bg-light">
+                <div class="container px-5 my-5">
+                    <div class="text-center mb-5">
+                        <h2 class="fw-bolder">궁금한 점이 있으신가요?</h2>
+                        <p class="lead fw-normal text-muted mb-0">궁금할만한 내용들을 아래 모아봤어요 &#128536;</p>
+                    </div>
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-xl-8">
+                            <!-- FAQ Accordion 1-->
+                            <div class="accordion mb-5" id="accordionExample">
+                                {% for faq in faqs %}
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header" id="heading{{ faq.heading_num }}"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ faq.collapse_num }}" aria-expanded="true" aria-controls="collapse{{ faq.collapse_num }}">{{ faq.question }}</button></h3>
+                                    <div class="accordion-collapse collapse" id="collapse{{ faq.collapse_num }}" aria-labelledby="heading{{ faq.heading_num }}" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            {{ faq.answer }}
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    {% endblock body_content %}
