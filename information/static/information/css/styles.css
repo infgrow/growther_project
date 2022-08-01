@@ -7815,6 +7815,16 @@ textarea.form-control-lg {
   --bs-text-opacity: 1;
 }
 
+.bg-morning {
+  --bs-bg-opacity: 1;
+  background-color: #F45B69 !important;
+}
+
+.bg-afternoon {
+  --bs-bg-opacity: 1;
+  background-color: #1995AD !important;
+}
+
 .bg-primary {
   --bs-bg-opacity: 1;
   background-color: #1E434C !important;
