@@ -239,9 +239,6 @@ a {
   color: #0d6efd;
   text-decoration: underline;
 }
-/* a:hover {
-  color: #0a58ca;
-} */
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
   color: inherit;
@@ -3017,13 +3014,13 @@ textarea.form-control-lg {
     transition: none;
   }
 }
-/* .btn:hover {
+.btn:hover {
   color: #212529;
 }
 
 a.outgrow-b:hover {
   color: #212529
-} */
+}
 
 .btn-check:focus + .btn, .btn:focus {
   outline: 0;
@@ -3074,6 +3071,13 @@ a.outgrow-b:hover {
   background-color: #333745;
   border-color: #333745;
 } */
+
+.btn-secondary > div:hover {
+  color: #fff;
+  background-color: #333745;
+  border-color: #333745;
+}
+
 .btn-check:focus + .btn-secondary, .btn-secondary:focus {
   color: #fff;
   background-color: #5c636a;
